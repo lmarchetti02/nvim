@@ -10,7 +10,6 @@ return {
 				null_ls.builtins.formatting.isort,
 				null_ls.builtins.formatting.beautysh,
 				null_ls.builtins.formatting.clang_format,
-				null_ls.builtins.diagnostics.clangd,
 			},
 		})
 
