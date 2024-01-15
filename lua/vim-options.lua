@@ -14,4 +14,9 @@ vim.opt.relativenumber = true
 
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>") -- delete search w/ space-h
 vim.keymap.set("n", "<leader>in", "gg=G") -- indent
+
+-- GIT
+vim.keymap.set("n", "<leader>pl", ":!git pull<CR>") -- pull
+vim.keymap.set("n", "<leader>ps", ":!git push<CR>") -- push
+vim.keymap.set("n", "<leader>ad", ":!git add .") -- add all
 vim.keymap.set("n", "<leader>gc", ":!git commit -m ''") -- indent
