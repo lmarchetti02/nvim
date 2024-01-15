@@ -13,7 +13,5 @@ vim.opt.relativenumber = true
 -- vim.opt.foldmethod = "indent"
 
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>") -- delete search w/ space-h
-vim.keymap.set("n", "<leader>in", "gg=G")           -- indent
-
-vim.keymap.set("n", "<leader>gc", ":!git commit -m ")           -- indent
-
+vim.keymap.set("n", "<leader>in", "gg=G") -- indent
+vim.keymap.set("n", "<leader>gc", ":!git commit -m ''") -- indent
