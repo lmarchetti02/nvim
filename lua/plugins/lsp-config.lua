@@ -23,10 +23,10 @@ return {
 			capabilities = capabilities,
 		})
 
-		vim.keymap.set("n", "D", vim.lsp.buf.hover, {}) -- get documentation
-		vim.keymap.set("n", "gd", vim.lsp.buf.definition, {}) -- go to definition
-		vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {}) -- go to declaration
+		vim.keymap.set("n", "H", vim.lsp.buf.hover, {}) -- get documentation
+		vim.keymap.set("n", "<leader>d", vim.lsp.buf.definition, {}) -- go to definition
+		vim.keymap.set("n", "<leader>D", vim.lsp.buf.declaration, {}) -- go to declaration
 		vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {}) -- open code action
 		vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
-	end
+	end,
 }

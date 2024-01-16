@@ -3,22 +3,11 @@ return {
 	event = "VeryLazy",
 	init = function()
 		vim.o.timeout = true
-		vim.o.timeoutlen = 1000
+		vim.o.timeoutlen = 500
 	end,
 
 	config = function()
 		local which_key = require("which-key")
-
-		local plugins = {
-			marks = true, -- shows a list of your marks on ' and `
-			registers = false, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
-			-- the presets plugin, adds help for a bunch of default keybindings in Neovim
-			-- No actual key bindings are created
-			spelling = {
-				enabled = true, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
-				suggestions = 20, -- how many suggestions should be shown in the list?
-			},
-		}
 
 		local opts = {
 			mode = "n", -- NORMAL mode
@@ -30,6 +19,9 @@ return {
 		}
 
 		local mappings = {
+			["d"] = { "<cmd>vim.lsp.buf.declaration<cr>", "Go To Declaration" },
+			["D"] = { "<cmd>vim.lsp.buf.definition<cr>", "Go to Definition" },
+
 			g = {
 				name = "Git",
 				j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
