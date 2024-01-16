@@ -10,7 +10,6 @@ vim.opt.autowrite = true
 vim.opt.autoread = true
 vim.opt.number = true
 vim.opt.relativenumber = true
--- vim.opt.foldmethod = "indent"
 
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>") -- delete search w/ space-h
 vim.keymap.set("n", "<leader>in", "gg=G") -- indent
@@ -27,3 +26,7 @@ vim.keymap.set("n", "<leader>a", "")
 vim.keymap.set("n", "<leader>u", "")
 vim.keymap.set("n", "<leader>y", "")
 vim.keymap.set("n", "<leader>d", "")
+
+-- folding
+vim.keymap.set("n", "<leader>fa", "zM")
+vim.keymap.set("n", "<leader>ua", "zR")
