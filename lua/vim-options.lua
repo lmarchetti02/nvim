@@ -36,3 +36,5 @@ vim.opt.spelllang = "en_us"
 vim.opt.spell = true
 vim.keymap.set("n", "<leader>sk", "]s")
 vim.keymap.set("n", "<leader>sj", "[s")
+
+vim.keymap.set("n", "<leader>ng", ":Neogit<CR>")
