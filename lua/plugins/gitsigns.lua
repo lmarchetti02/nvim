@@ -44,5 +44,14 @@ return {
 				enable = false,
 			},
 		})
+
+		vim.keymap.set("n", "gk", ":Gitsigns prev_hunk<CR>")
+		vim.keymap.set("n", "gj", ":Gitsigns next_hunk<CR>")
+		vim.keymap.set("n", "gb", ":Gitsigns toggle_current_line_blame<CR>")
+		vim.keymap.set("n", "gr", ":Gitsigns reset_hunk<CR>")
+		vim.keymap.set("n", "gR", ":Gitsigns reset_buffer<CR>")
+		vim.keymap.set("n", "gS", ":Gitsigns stage_buffer<CR>")
+		vim.keymap.set("n", "gd", ":Gitsigns diffthis<CR>")
+		vim.keymap.set({ "n", "v" }, "gh", ":Gitsigns select_hunk<CR>")
 	end,
 }
