@@ -6,7 +6,7 @@ return {
 
 		lint.linters_by_ft = {
 			python = { "pylint" },
-			cpp = { "cppcheck" },
+			cpp = { "clangtidy" },
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
