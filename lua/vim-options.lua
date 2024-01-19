@@ -27,7 +27,7 @@ vim.keymap.set("n", "<leader>u", "")
 vim.keymap.set("n", "<leader>y", "")
 vim.keymap.set("n", "<leader>d", "")
 
--- folding Luca
+-- folding
 vim.keymap.set("n", "<leader>fa", "zM")
 vim.keymap.set("n", "<leader>ua", "zR")
 

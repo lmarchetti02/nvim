@@ -2,6 +2,7 @@
     "diagnostics.globals": [
         "vim",
         "cmp",
-        "lint_autogroup"
+        "lint_autogroup",
+        "luasnip"
     ]
 }
