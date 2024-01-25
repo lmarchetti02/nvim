@@ -28,7 +28,6 @@ vim.keymap.set("n", "<leader>ua", "zR")
 -- spelling
 vim.opt.spelllang = "en_us"
 vim.opt.spell = true
-vim.keymap.set("n", "<leader>sk", "]s")
-vim.keymap.set("n", "<leader>sj", "[s")
-
-vim.keymap.set("n", "<leader>ng", ":Neogit<CR>")
+vim.keymap.set("n", "<leader>sk", "]s") -- jump to previous misspelled word
+vim.keymap.set("n", "<leader>sj", "[s") -- jump to next misspelled word
+vim.keymap.set("n", "<leader>sg", "zg") -- add word to dictionary
