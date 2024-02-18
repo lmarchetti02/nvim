@@ -22,8 +22,9 @@ return {
 		lspconfig.marksman.setup({
 			capabilities = capabilities,
 		})
-		lspconfig.pyre.setup({
+		lspconfig.pyright.setup({
 			capabilities = capabilities,
+			filetypes = { "python" },
 		})
 
 		vim.keymap.set("n", "H", vim.lsp.buf.hover, {}) -- get documentation

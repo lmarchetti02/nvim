@@ -21,7 +21,7 @@ return {
 				"cmake", -- CMake
 				"julials", -- Julia
 				"marksman", -- Markdown
-				"pyre", -- Python
+				"pyright", -- Python
 				"jsonls", -- Json
 			},
 
