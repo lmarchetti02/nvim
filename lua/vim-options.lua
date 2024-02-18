@@ -32,3 +32,10 @@ vim.opt.spell = true
 vim.keymap.set("n", "<leader>sk", "]s") -- jump to previous misspelled word
 vim.keymap.set("n", "<leader>sj", "[s") -- jump to next misspelled word
 vim.keymap.set("n", "<leader>sg", "zg") -- add word to dictionary
+
+-- braces
+vim.keymap.set("i", "{", "{}<Esc>ha", { noremap = true, silent = true })
+vim.keymap.set("i", "[", "[]<Esc>ha", { noremap = true, silent = true })
+vim.keymap.set("i", "(", "()<Esc>ha", { noremap = true, silent = true })
+vim.keymap.set("i", "'", "''<Esc>ha", { noremap = true, silent = true })
+vim.keymap.set("i", '"', '""<Esc>ha', { noremap = true, silent = true })
