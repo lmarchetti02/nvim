@@ -23,6 +23,7 @@ return {
 				"marksman", -- Markdown
 				"pyright", -- Python
 				"jsonls", -- Json
+				"texlab" -- LaTeX
 			},
 
 			automatic_installation = true,

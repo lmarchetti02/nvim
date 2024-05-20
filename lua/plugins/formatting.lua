@@ -11,6 +11,7 @@ return {
 				cpp = { "clang_format" },
 				markdown = { "prettier" },
 				json = { "prettier" },
+				latex = { "latexindent" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

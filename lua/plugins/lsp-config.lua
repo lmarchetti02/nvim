@@ -12,6 +12,7 @@ return {
 		})
 		lspconfig.clangd.setup({
 			capabilities = capabilities,
+			compilationDatabasePath = "./build",
 		})
 		lspconfig.cmake.setup({
 			capabilities = capabilities,
@@ -25,6 +26,9 @@ return {
 		lspconfig.pyright.setup({
 			capabilities = capabilities,
 			filetypes = { "python" },
+		})
+		lspconfig.texlab.setup({
+			capabilities = capabilities,
 		})
 
 		vim.keymap.set("n", "H", vim.lsp.buf.hover, {}) -- get documentation

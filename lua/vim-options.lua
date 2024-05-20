@@ -3,9 +3,9 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.autowrite = true
 vim.opt.autoread = true
 vim.opt.number = true
@@ -27,7 +27,7 @@ vim.keymap.set("n", "<leader>fa", "zM")
 vim.keymap.set("n", "<leader>ua", "zR")
 
 -- spelling
-vim.opt.spelllang = "en_us"
+vim.opt.spelllang = { "en_us", "it" }
 vim.opt.spell = true
 vim.keymap.set("n", "<leader>sk", "]s") -- jump to previous misspelled word
 vim.keymap.set("n", "<leader>sj", "[s") -- jump to next misspelled word
