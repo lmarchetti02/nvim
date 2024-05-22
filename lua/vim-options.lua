@@ -14,7 +14,7 @@ vim.opt.relativenumber = true
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>") -- delete search w/ space-h
 vim.keymap.set("n", "<leader>in", "gg=G") -- indent
 vim.keymap.set("n", "<leader>sa", "ggVG") -- select all
-vim.keymap.set("i", "jk", "<Esc>") -- select all
+vim.keymap.set("i", "kj", "<Esc>") -- select all
 
 -- remove some mappings
 vim.keymap.set("n", "<leader>i", "")
