@@ -22,6 +22,22 @@ return {
 					never_show = { ".git" },
 				},
 			},
+			window = {
+				mappings = {
+					["<leader><cr>"] = function(state)
+						local node = state.tree:get_node()
+						if node.type == "directory" then
+							-- Change the current working directory to the selected directory
+							vim.cmd("cd " .. node.path)
+							-- Optionally, you can also set Neo-tree's root to the new directory
+							require("neo-tree.command").execute({ toggle = true, dir = node.path })
+						else
+							-- Open the file if it's not a directory
+							require("neo-tree.ui.renderer").focus_node(state, node.id)
+						end
+					end,
+				},
+			},
 		})
 	end,
 }
