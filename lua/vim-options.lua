@@ -1,8 +1,8 @@
 -- VIM OPTIONS
 
+-- basic configurations
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -11,10 +11,11 @@ vim.opt.autoread = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+-- miscellaneous mappings
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>") -- delete search w/ space-h
 vim.keymap.set("n", "<leader>in", "gg=G") -- indent
 vim.keymap.set("n", "<leader>sa", "ggVG") -- select all
-vim.keymap.set("i", "kj", "<Esc>") -- select all
+vim.keymap.set("i", "kj", "<Esc>") -- exit normal mode
 
 -- remove some mappings
 vim.keymap.set("n", "<leader>i", "")
@@ -24,8 +25,8 @@ vim.keymap.set("n", "<leader>y", "")
 vim.keymap.set("n", "<leader>d", "")
 
 -- folding
-vim.keymap.set("n", "<leader>fa", "zM")
-vim.keymap.set("n", "<leader>ua", "zR")
+vim.keymap.set("n", "<leader>fa", "zM") -- fold all
+vim.keymap.set("n", "<leader>ua", "zR") -- unfold all
 
 -- spelling
 vim.opt.spelllang = { "en_us", "it" }
@@ -53,7 +54,7 @@ end
 
 vim.keymap.set(
 	"n",
-	"<leader>tv",
+	"<leader>tl",
 	":lua ToggleVirtualText()<CR>",
 	{ noremap = true, silent = true, desc = "Toggle linting text" }
 )
