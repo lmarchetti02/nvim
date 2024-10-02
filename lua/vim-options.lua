@@ -40,3 +40,20 @@ vim.keymap.set("i", "[", "[]<Esc>ha", { noremap = true, silent = true })
 vim.keymap.set("i", "(", "()<Esc>ha", { noremap = true, silent = true })
 vim.keymap.set("i", "'", "''<Esc>ha", { noremap = true, silent = true })
 vim.keymap.set("i", '"', '""<Esc>ha', { noremap = true, silent = true })
+
+-- toggle linting errors
+local virtual_text_enabled = true -- Track the state of virtual text
+
+function ToggleVirtualText()
+	virtual_text_enabled = not virtual_text_enabled -- Toggle the state
+	vim.diagnostic.config({
+		virtual_text = virtual_text_enabled, -- Set the new state
+	})
+end
+
+vim.keymap.set(
+	"n",
+	"<leader>tv",
+	":lua ToggleVirtualText()<CR>",
+	{ noremap = true, silent = true, desc = "Toggle linting text" }
+)
