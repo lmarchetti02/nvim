@@ -12,9 +12,9 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- miscellaneous mappings
-vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>") -- delete search w/ space-h
-vim.keymap.set("n", "<leader>in", "gg=G") -- indent
-vim.keymap.set("n", "<leader>sa", "ggVG") -- select all
+vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>", { desc = "Delete Search" })
+vim.keymap.set("n", "<leader>in", "gg=G", { desc = "Indent All" })
+vim.keymap.set("n", "<leader>sa", "ggVG", { desc = "Select All" })
 vim.keymap.set("i", "kj", "<Esc>") -- exit normal mode
 
 -- remove some mappings
@@ -25,15 +25,15 @@ vim.keymap.set("n", "<leader>y", "")
 vim.keymap.set("n", "<leader>d", "")
 
 -- folding
-vim.keymap.set("n", "<leader>fa", "zM") -- fold all
-vim.keymap.set("n", "<leader>ua", "zR") -- unfold all
+vim.keymap.set("n", "<leader>fa", "zM", { desc = "Fold All" })
+vim.keymap.set("n", "<leader>ua", "zR", { desc = "Unfold All" })
 
 -- spelling
 vim.opt.spelllang = { "en_us", "it" }
 vim.opt.spell = true
-vim.keymap.set("n", "<leader>sk", "]s") -- jump to previous misspelled word
-vim.keymap.set("n", "<leader>sj", "[s") -- jump to next misspelled word
-vim.keymap.set("n", "<leader>sg", "zg") -- add word to dictionary
+vim.keymap.set("n", "<leader>sk", "]s", { desc = "Previous Misspelled Word" })
+vim.keymap.set("n", "<leader>sj", "[s", { desc = "Next Misspelled Word" })
+vim.keymap.set("n", "<leader>sg", "zg", { desc = "Add word to dictionary" })
 
 -- braces
 vim.keymap.set("i", "{", "{}<Esc>ha", { noremap = true, silent = true })
@@ -54,7 +54,7 @@ end
 
 vim.keymap.set(
 	"n",
-	"<leader>tl",
+	"<leader>vt",
 	":lua ToggleVirtualText()<CR>",
 	{ noremap = true, silent = true, desc = "Toggle linting text" }
 )

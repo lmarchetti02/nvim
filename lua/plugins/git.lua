@@ -40,18 +40,18 @@ return {
 				row = 0,
 				col = 1,
 			},
-			yadm = {
-				enable = false,
-			},
+			-- yadm = {
+			-- 	enable = false,
+			-- },
 		})
 
-		vim.keymap.set("n", "gk", ":Gitsigns prev_hunk<CR>")
-		vim.keymap.set("n", "gj", ":Gitsigns next_hunk<CR>")
-		vim.keymap.set("n", "gb", ":Gitsigns toggle_current_line_blame<CR>")
-		vim.keymap.set("n", "gr", ":Gitsigns reset_hunk<CR>")
-		vim.keymap.set("n", "gR", ":Gitsigns reset_buffer<CR>")
-		vim.keymap.set("n", "gS", ":Gitsigns stage_buffer<CR>")
-		vim.keymap.set("n", "gd", ":Gitsigns diffthis<CR>")
-		vim.keymap.set({ "n", "v" }, "gh", ":Gitsigns select_hunk<CR>")
+		vim.keymap.set("n", "gk", ":Gitsigns prev_hunk<CR>", { desc = "Previous Hunk" })
+		vim.keymap.set("n", "gj", ":Gitsigns next_hunk<CR>", { desc = "Next Hunk" })
+		vim.keymap.set("n", "gb", ":Gitsigns toggle_current_line_blame<CR>", { desc = "Toggle Line Blame" })
+		vim.keymap.set("n", "gr", ":Gitsigns reset_hunk<CR>", { desc = "Reset Hunk" })
+		vim.keymap.set("n", "gR", ":Gitsigns reset_buffer<CR>", { desc = "Reset Buffer" })
+		vim.keymap.set("n", "gS", ":Gitsigns stage_buffer<CR>", { desc = "Stage Buffer" })
+		vim.keymap.set("n", "gd", ":Gitsigns diffthis<CR>", { desc = "Previous Hunk" })
+		vim.keymap.set({ "n", "v" }, "gh", ":Gitsigns select_hunk<CR>", { desc = "Diff File" })
 	end,
 }

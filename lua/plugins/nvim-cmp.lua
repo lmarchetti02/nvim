@@ -63,15 +63,17 @@ return {
 				mapping = cmp.mapping.preset.cmdline(),
 				sources = cmp.config.sources({
 					{ name = "path", max_item_count = 5 },
+				}, {
+					{ name = "cmdline", max_item_count = 5 },
 				}),
 				matching = { disallow_symbol_nonprefix_matching = false },
 			}),
 
 			sources = cmp.config.sources({
-				{ name = "nvim_lsp", max_item_count = 6 },
-				{ name = "luasnip", max_item_count = 6 },
-				{ name = "buffer", max_item_count = 6 },
-				{ name = "path", max_item_count = 6 },
+				{ name = "nvim_lsp", max_item_count = 5 },
+				{ name = "luasnip", max_item_count = 5 },
+				{ name = "buffer", max_item_count = 5 },
+				{ name = "path", max_item_count = 5 },
 			}),
 
 			formatting = {
