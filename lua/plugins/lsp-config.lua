@@ -34,6 +34,9 @@ return {
 			capabilities = capabilities,
 			filetypes = { "bash", "sh", "zsh" },
 		})
+		lspconfig.vimls.setup({
+			capabilities = capabilities,
+		})
 
 		vim.keymap.set("n", "H", vim.lsp.buf.hover, {}) -- get documentation
 		vim.keymap.set("n", "<leader>d", vim.lsp.buf.definition, {}) -- go to definition
