@@ -42,3 +42,4 @@ luac.out
 # Custom
 /spell
 .DS_Store
+messages.txt
