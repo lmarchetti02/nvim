@@ -23,7 +23,7 @@ return {
 				"marksman", -- Markdown
 				"pyright", -- Python
 				"jsonls", -- Json
-				"texlab" -- LaTeX
+				"texlab", -- LaTeX
 			},
 
 			automatic_installation = true,
@@ -36,6 +36,9 @@ return {
 				"isort", -- python formatter
 				"black", -- python formatter
 				"pylint", -- python linter
+				"debugpy",
+				"flake8",
+				"mypy",
 				"clang-format", -- c++ formatter
 			},
 		})
