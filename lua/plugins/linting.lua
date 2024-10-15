@@ -5,7 +5,7 @@ return {
 		local lint = require("lint")
 
 		lint.linters_by_ft = {
-			python = { "pylint" },
+			python = { "pylint", "flake8", "mypy" },
 			cpp = { "clangtidy" },
 		}
 
