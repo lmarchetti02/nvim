@@ -7,6 +7,7 @@ return {
 		lint.linters_by_ft = {
 			python = { "pylint", "flake8", "mypy" },
 			cpp = { "clangtidy" },
+			tex = { "vale" },
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })

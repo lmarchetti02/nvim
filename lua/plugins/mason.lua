@@ -34,7 +34,7 @@ return {
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
 				"isort", -- python formatter
-				"black", -- python formatter
+				"ruff", -- python formatter
 				"pylint", -- python linter
 				"debugpy",
 				"flake8",
