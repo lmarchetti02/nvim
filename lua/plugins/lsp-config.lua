@@ -5,43 +5,44 @@ return {
 	},
 	config = function()
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
-		local lspconfig = require("lspconfig")
 
-		lspconfig.lua_ls.setup({
-			capabilities = capabilities,
-		})
-		lspconfig.clangd.setup({
-			capabilities = capabilities,
-			compilationDatabasePath = "./build",
-		})
-		lspconfig.cmake.setup({
-			capabilities = capabilities,
-		})
-		lspconfig.julials.setup({
-			capabilities = capabilities,
-		})
-		lspconfig.marksman.setup({
-			capabilities = capabilities,
-		})
-		lspconfig.pyright.setup({
-			capabilities = capabilities,
-			filetypes = { "python" },
-		})
-		lspconfig.texlab.setup({
-			capabilities = capabilities,
-		})
-		lspconfig.bashls.setup({
-			capabilities = capabilities,
-			filetypes = { "bash", "sh", "zsh" },
-		})
-		lspconfig.vimls.setup({
-			capabilities = capabilities,
-		})
+		-- Define server configurations
+		local servers = {
+			lua_ls = {},
+			clangd = {
+				cmd_env = {
+					compilationDatabasePath = "./build",
+				},
+			},
+			cmake = {},
+			marksman = {},
+			pyright = {
+				filetypes = { "python" },
+			},
+			texlab = {},
+			bashls = {
+				filetypes = { "bash", "sh", "zsh" },
+			},
+			vimls = {},
+		}
 
-		vim.keymap.set("n", "H", vim.lsp.buf.hover, {}) -- get documentation
-		vim.keymap.set("n", "<leader>d", vim.lsp.buf.definition, {}) -- go to definition
-		vim.keymap.set("n", "<leader>D", vim.lsp.buf.declaration, {}) -- go to declaration
-		vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {}) -- open code action
-		vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
+		-- Configure and enable each server
+		for server, config in pairs(servers) do
+			config.capabilities = capabilities
+			vim.lsp.config[server] = config
+			vim.lsp.enable(server)
+		end
+
+		-- Set up keybindings when LSP attaches
+		vim.api.nvim_create_autocmd("LspAttach", {
+			callback = function(args)
+				local opts = { buffer = args.buf }
+				vim.keymap.set("n", "H", vim.lsp.buf.hover, opts)
+				vim.keymap.set("n", "<leader>d", vim.lsp.buf.definition, opts)
+				vim.keymap.set("n", "<leader>D", vim.lsp.buf.declaration, opts)
+				vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
+				vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+			end,
+		})
 	end,
 }
