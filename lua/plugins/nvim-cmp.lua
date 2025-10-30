@@ -17,15 +17,16 @@ return {
 		local luasnip = require("luasnip")
 
 		require("luasnip.loaders.from_vscode").lazy_load()
+		require("snippets")
 
+		-- Main completion setup
 		cmp.setup({
 			completion = {
 				completeopt = "menu,menuone,preview,noselect",
 			},
-
 			snippet = {
 				expand = function(args)
-					require("luasnip").lsp_expand(args.body)
+					luasnip.lsp_expand(args.body)
 				end,
 			},
 			window = {
@@ -37,51 +38,55 @@ return {
 				["<C-f>"] = cmp.mapping.scroll_docs(4),
 				["<C-Space>"] = cmp.mapping.complete(),
 				["<C-e>"] = cmp.mapping.abort(),
+				["<C-j>"] = cmp.mapping.select_next_item(),
+				["<C-k>"] = cmp.mapping.select_prev_item(),
 				["<CR>"] = cmp.mapping.confirm({ select = true }),
-
-				vim.keymap.set({ "i", "s" }, "<C-l>", function()
+				["<C-l>"] = cmp.mapping(function(fallback)
 					if luasnip.expand_or_jumpable() then
 						luasnip.expand_or_jump()
+					else
+						fallback()
 					end
-				end, { desc = "Snippet next argument", silent = true }),
-
-				vim.keymap.set({ "i", "s" }, "<C-h>", function()
+				end, { "i", "s" }),
+				["<C-h>"] = cmp.mapping(function(fallback)
 					if luasnip.jumpable(-1) then
 						luasnip.jump(-1)
+					else
+						fallback()
 					end
-				end, { desc = "Snippet previous argument", silent = true }),
+				end, { "i", "s" }),
 			}),
-
-			cmp.setup.cmdline({ "/", "?" }, {
-				mapping = cmp.mapping.preset.cmdline(),
-				sources = {
-					{ name = "buffer", max_item_count = 5 },
-				},
-			}),
-
-			cmp.setup.cmdline(":", {
-				mapping = cmp.mapping.preset.cmdline(),
-				sources = cmp.config.sources({
-					{ name = "path", max_item_count = 5 },
-				}, {
-					{ name = "cmdline", max_item_count = 5 },
-				}),
-				matching = { disallow_symbol_nonprefix_matching = false },
-			}),
-
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp", max_item_count = 5 },
 				{ name = "luasnip", max_item_count = 5 },
 				{ name = "buffer", max_item_count = 5 },
 				{ name = "path", max_item_count = 5 },
 			}),
-
 			formatting = {
 				format = lspkind.cmp_format({
 					maxwidth = 50,
-					ellipsischar = "...",
+					ellipsis_char = "...",
 				}),
 			},
+		})
+
+		-- Command-line completion for search
+		cmp.setup.cmdline({ "/", "?" }, {
+			mapping = cmp.mapping.preset.cmdline(),
+			sources = {
+				{ name = "buffer", max_item_count = 5 },
+			},
+		})
+
+		-- Command-line completion for commands
+		cmp.setup.cmdline(":", {
+			mapping = cmp.mapping.preset.cmdline(),
+			sources = cmp.config.sources({
+				{ name = "path", max_item_count = 5 },
+			}, {
+				{ name = "cmdline", max_item_count = 5 },
+			}),
+			matching = { disallow_symbol_nonprefix_matching = false },
 		})
 	end,
 }
