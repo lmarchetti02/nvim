@@ -8,7 +8,7 @@ return {
 		config.setup({
 			auto_install = true,
 			ensure_installed = { "c", "cpp", "lua", "cmake", "python", "latex", "csv" },
-			higlight = { enable = true },
+			highlight = { enable = true },
 			indent = { enable = true },
 		})
 
