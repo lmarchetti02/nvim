@@ -17,3 +17,4 @@ local opts = {}
 
 require("vim-options") -- import vim options
 require("lazy").setup("plugins") -- import plugins
+require("config.floating-terminal") -- import terminal
