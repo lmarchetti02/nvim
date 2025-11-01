@@ -20,7 +20,7 @@ return {
 	}),
 
 	-- Class with __init__
-	s("class", {
+	s("cls", {
 		t("class "),
 		i(1, "ClassName"),
 		t({ ":", "    def __init__(self, " }),
@@ -45,7 +45,7 @@ return {
 		t({ '"""' }),
 		i(1, "Description"),
 		t({ "", "", "Args:", "    " }),
-		i(2, "param: description"),
+		i(2, "param (type): description"),
 		t({ "", "", "Returns:", "    " }),
 		i(3, "return_type: description"),
 		t({ "", '"""' }),
