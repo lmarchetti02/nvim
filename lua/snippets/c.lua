@@ -8,7 +8,7 @@ local c = ls.choice_node
 return {
 	-- Main function
 	s("mn", {
-		t({ "int main() {", "    " }),
+		t({ "int main(void) {", "    " }),
 		i(1, "// code here"),
 		t({ "", "    return 0;", "}" }),
 	}),
