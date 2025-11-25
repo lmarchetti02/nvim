@@ -21,7 +21,6 @@ vim.keymap.set("i", "kj", "<Esc>") -- exit normal mode
 vim.keymap.set("n", "<leader>i", "")
 vim.keymap.set("n", "<leader>a", "")
 vim.keymap.set("n", "<leader>u", "")
-vim.keymap.set("n", "<leader>y", "")
 vim.keymap.set("n", "<leader>d", "")
 
 -- folding
@@ -41,6 +40,10 @@ vim.keymap.set("i", "[", "[]<Esc>ha", { noremap = true, silent = true })
 vim.keymap.set("i", "(", "()<Esc>ha", { noremap = true, silent = true })
 vim.keymap.set("i", "'", "''<Esc>ha", { noremap = true, silent = true })
 vim.keymap.set("i", '"', '""<Esc>ha', { noremap = true, silent = true })
+
+-- copying/pasting to clipboard
+vim.keymap.set({ "n", "v" }, "<leader>y", '"*y', { desc = "Copy selection to clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>P", '"*p', { desc = "Paste from system clipboard" })
 
 -- toggle linting errors
 local virtual_text_enabled = true -- Track the state of virtual text

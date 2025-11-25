@@ -36,11 +36,21 @@ return {
 		-- Set up keybindings when LSP attaches
 		vim.api.nvim_create_autocmd("LspAttach", {
 			callback = function(args)
-				local opts = { buffer = args.buf }
+				local opts = { buffer = args.buf, desc = "" }
+
+				opts.desc = "LSP: Hover Documentation"
 				vim.keymap.set("n", "H", vim.lsp.buf.hover, opts)
+
+				opts.desc = "LSP: Go to Definition"
 				vim.keymap.set("n", "<leader>d", vim.lsp.buf.definition, opts)
+
+				opts.desc = "LSP: Go to Declaration"
 				vim.keymap.set("n", "<leader>D", vim.lsp.buf.declaration, opts)
+
+				opts.desc = "LSP: Code Action"
 				vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
+
+				opts.desc = "LSP: Find References"
 				vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 			end,
 		})
