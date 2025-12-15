@@ -34,13 +34,6 @@ vim.keymap.set("n", "<leader>sk", "]s", { desc = "Previous Misspelled Word" })
 vim.keymap.set("n", "<leader>sj", "[s", { desc = "Next Misspelled Word" })
 vim.keymap.set("n", "<leader>sg", "zg", { desc = "Add word to dictionary" })
 
--- braces
-vim.keymap.set("i", "{", "{}<Esc>ha", { noremap = true, silent = true })
-vim.keymap.set("i", "[", "[]<Esc>ha", { noremap = true, silent = true })
-vim.keymap.set("i", "(", "()<Esc>ha", { noremap = true, silent = true })
-vim.keymap.set("i", "'", "''<Esc>ha", { noremap = true, silent = true })
-vim.keymap.set("i", '"', '""<Esc>ha', { noremap = true, silent = true })
-
 -- copying/pasting to clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", '"*y', { desc = "Copy selection to clipboard" })
 vim.keymap.set({ "n", "v" }, "<leader>P", '"*p', { desc = "Paste from system clipboard" })
@@ -61,3 +54,9 @@ vim.keymap.set(
 	":lua ToggleVirtualText()<CR>",
 	{ noremap = true, silent = true, desc = "Toggle linting text" }
 )
+
+-- Navigate panes
+vim.keymap.set("n", "<leader>wk", "<C-w>k", { desc = "Move focus to the upper window" })
+vim.keymap.set("n", "<leader>wj", "<C-w>j", { desc = "Move focus to the lower window" })
+vim.keymap.set("n", "<leader>wh", "<C-w>h", { desc = "Move focus to the left window" })
+vim.keymap.set("n", "<leader>wl", "<C-w>l", { desc = "Move focus to the right window" })
