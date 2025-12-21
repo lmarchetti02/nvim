@@ -51,7 +51,7 @@ return {
 				vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
 
 				opts.desc = "LSP: Find References"
-				vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+				vim.keymap.set("n", "fr", vim.lsp.buf.references, opts)
 			end,
 		})
 	end,
