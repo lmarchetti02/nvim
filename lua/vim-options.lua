@@ -23,10 +23,6 @@ vim.keymap.set("n", "<leader>a", "")
 vim.keymap.set("n", "<leader>u", "")
 vim.keymap.set("n", "<leader>d", "")
 
--- folding
-vim.keymap.set("n", "<leader>fa", "zM", { desc = "Fold All" })
-vim.keymap.set("n", "<leader>ua", "zR", { desc = "Unfold All" })
-
 -- spelling
 vim.opt.spelllang = { "en_us", "it" }
 vim.opt.spell = true
