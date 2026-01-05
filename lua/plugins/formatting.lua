@@ -12,8 +12,8 @@ return {
 				markdown = { "prettier" },
 				json = { "prettier" },
 				latex = { "latexindent" },
-				bash = { "shfmt" },
-				zsh = { "shfmt" },
+				bash = { "beautysh" },
+				zsh = { "beautysh" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

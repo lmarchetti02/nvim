@@ -40,6 +40,7 @@ return {
 				"flake8",
 				"mypy",
 				"clang-format", -- c++ formatter
+				"beautysh", -- bash/zsh formatter
 			},
 		})
 	end,
