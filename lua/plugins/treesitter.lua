@@ -22,11 +22,5 @@ return {
 			highlight = { enable = true },
 			indent = { enable = true },
 		})
-
-		require("ufo").setup({
-			provider_selector = function()
-				return { "treesitter", "indent" }
-			end,
-		})
 	end,
 }

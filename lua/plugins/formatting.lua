@@ -6,7 +6,7 @@ return {
 
 		conform.setup({
 			formatters_by_ft = {
-				python = { "isort", "ruff_format" },
+				python = { "ruff_format", "isort" },
 				lua = { "stylua" },
 				cpp = { "clang_format" },
 				markdown = { "prettier" },

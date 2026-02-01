@@ -21,7 +21,6 @@ vim.keymap.set("i", "kj", "<Esc>") -- exit normal mode
 vim.keymap.set("n", "<leader>i", "")
 vim.keymap.set("n", "<leader>a", "")
 vim.keymap.set("n", "<leader>u", "")
-vim.keymap.set("n", "<leader>d", "")
 
 -- spelling
 vim.opt.spelllang = { "en_us", "it" }
