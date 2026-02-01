@@ -24,6 +24,12 @@ return {
 				filetypes = { "bash", "sh", "zsh" },
 			},
 			vimls = {},
+			tinymist = {
+				settings = {
+					exportPdf = "onSave", -- "onSave" or "onType"
+					outputPath = "$root/$dir/$name",
+				},
+			},
 		}
 
 		-- Configure and enable each server

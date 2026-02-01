@@ -14,6 +14,7 @@ return {
 				latex = { "latexindent" },
 				bash = { "beautysh" },
 				zsh = { "beautysh" },
+				typst = { "typstyle" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

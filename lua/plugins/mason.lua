@@ -24,6 +24,7 @@ return {
 				"pyright", -- Python
 				"jsonls", -- Json
 				"texlab", -- LaTeX
+				"tinymist", --Typst
 			},
 
 			automatic_installation = true,
@@ -36,6 +37,7 @@ return {
 				"isort", -- python formatter
 				"ruff", -- python formatter
 				"pylint", -- python linter
+				"typstyle", --typst formatter
 				"debugpy",
 				"flake8",
 				"mypy",
