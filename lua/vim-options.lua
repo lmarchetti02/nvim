@@ -55,3 +55,12 @@ vim.keymap.set("n", "<leader>wk", "<C-w>k", { desc = "Move focus to the upper wi
 vim.keymap.set("n", "<leader>wj", "<C-w>j", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<leader>wh", "<C-w>h", { desc = "Move focus to the left window" })
 vim.keymap.set("n", "<leader>wl", "<C-w>l", { desc = "Move focus to the right window" })
+
+-- Wrap lines at words, not characters
+vim.opt.wrap = true
+vim.opt.linebreak = true
+
+-- Better vertical movement
+-- Moves by visual lines (wrapped lines) unless a count is provided
+vim.keymap.set({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
+vim.keymap.set({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
