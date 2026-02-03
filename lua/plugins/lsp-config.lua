@@ -30,6 +30,7 @@ return {
 					outputPath = "$root/$dir/$name",
 				},
 			},
+			taplo = {},
 		}
 
 		-- Configure and enable each server

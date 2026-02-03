@@ -15,6 +15,7 @@ return {
 				bash = { "beautysh" },
 				zsh = { "beautysh" },
 				typst = { "typstyle" },
+				toml = { "taplo" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

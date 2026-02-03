@@ -25,6 +25,7 @@ return {
 				"jsonls", -- Json
 				"texlab", -- LaTeX
 				"tinymist", --Typst
+				"taplo", -- TOML
 			},
 
 			automatic_installation = true,
@@ -43,6 +44,7 @@ return {
 				"mypy",
 				"clang-format", -- c++ formatter
 				"beautysh", -- bash/zsh formatter
+				"taplo", --TOML formatter
 			},
 		})
 	end,
