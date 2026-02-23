@@ -18,6 +18,23 @@ return {
 			marksman = {},
 			pyright = {
 				filetypes = { "python" },
+				on_init = function(client)
+					-- Get the workspace root
+					local path = client.workspace_folders[1].name
+
+					-- Check for .venv (uv)
+					if vim.loop.fs_stat(path .. "/.venv/bin/python") then
+						client.config.settings.python.pythonPath = path .. "/.venv/bin/python"
+					end
+				end,
+				settings = {
+					python = {
+						analysis = {
+							autoSearchPaths = true,
+							useLibraryCodeForTypes = true,
+						},
+					},
+				},
 			},
 			texlab = {},
 			bashls = {
