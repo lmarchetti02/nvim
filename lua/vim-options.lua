@@ -33,6 +33,9 @@ vim.keymap.set("n", "<leader>sg", "zg", { desc = "Add word to dictionary" })
 vim.keymap.set({ "n", "v" }, "<leader>y", '"*y', { desc = "Copy selection to clipboard" })
 vim.keymap.set({ "n", "v" }, "<leader>P", '"*p', { desc = "Paste from system clipboard" })
 
+-- non-destructive paste with "p" and
+vim.keymap.set("x", "p", [["_dP]])
+
 -- toggle linting errors
 local virtual_text_enabled = true -- Track the state of virtual text
 
