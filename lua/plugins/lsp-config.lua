@@ -19,10 +19,20 @@ return {
 			pyright = {
 				filetypes = { "python" },
 				on_init = function(client)
-					-- Get the workspace root
-					local path = client.workspace_folders[1].name
+					-- Safely get the workspace root directory
+					local path = client.config.root_dir
+						or (
+							client.workspace_folders
+							and client.workspace_folders[1]
+							and client.workspace_folders[1].name
+						)
 
-					-- Check for .venv (uv)
+					-- If no workspace is found, skip the venv check
+					if not path then
+						return
+					end
+
+					-- Check for Linux/Mac .venv
 					if vim.loop.fs_stat(path .. "/.venv/bin/python") then
 						client.config.settings.python.pythonPath = path .. "/.venv/bin/python"
 					end
