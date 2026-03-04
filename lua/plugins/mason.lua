@@ -26,6 +26,8 @@ return {
 				"texlab", -- LaTeX
 				"tinymist", --Typst
 				"taplo", -- TOML
+				"bashls", -- bash, zsh
+				"vimls", -- vimscript
 			},
 
 			automatic_installation = true,
