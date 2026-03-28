@@ -19,6 +19,7 @@ return {
 				"markdown_inline",
 				"typst",
 				"toml",
+				"dot",
 			},
 			highlight = { enable = true },
 			indent = { enable = true },

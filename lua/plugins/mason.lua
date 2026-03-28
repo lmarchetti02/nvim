@@ -28,6 +28,7 @@ return {
 				"taplo", -- TOML
 				"bashls", -- bash, zsh
 				"vimls", -- vimscript
+				"dotls", -- dot
 			},
 
 			automatic_installation = true,

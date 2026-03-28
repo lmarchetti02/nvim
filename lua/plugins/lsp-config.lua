@@ -8,14 +8,11 @@ return {
 
 		-- Define server configurations
 		local servers = {
-			lua_ls = {},
 			clangd = {
 				cmd_env = {
 					compilationDatabasePath = "./build",
 				},
 			},
-			cmake = {},
-			marksman = {},
 			pyright = {
 				filetypes = { "python" },
 				on_init = function(client)
@@ -46,18 +43,22 @@ return {
 					},
 				},
 			},
-			texlab = {},
 			bashls = {
 				filetypes = { "bash", "sh", "zsh" },
 			},
-			vimls = {},
 			tinymist = {
 				settings = {
 					exportPdf = "onSave", -- "onSave" or "onType"
 					outputPath = "$root/$dir/$name",
 				},
 			},
+			lua_ls = {},
+			cmake = {},
+			marksman = {},
+			vimls = {},
+			texlab = {},
 			taplo = {},
+			dotls = {},
 		}
 
 		-- Configure and enable each server
