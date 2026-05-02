@@ -43,5 +43,6 @@
   "typst-preview.nvim": { "branch": "master", "commit": "e123a7ab64e52d836e00dea9251e85b201f38966" },
   "vim-cmake": { "branch": "master", "commit": "896bc2189c8ade62d00a0ebedc59c65d9d9b0d65" },
   "vim-tmux-navigator": { "branch": "master", "commit": "e41c431a0c7b7388ae7ba341f01a0d217eb3a432" },
+  "vimtex": { "branch": "master", "commit": "97e11bd4f56d46a87f8593d6ccb27820e19c4ab0" },
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" }
 }
