@@ -21,7 +21,7 @@ return {
 				"toml",
 				"dot",
 			},
-			highlight = { enable = true },
+			highlight = { enable = true, disable = { "latex" } },
 			indent = { enable = true },
 		})
 	end,

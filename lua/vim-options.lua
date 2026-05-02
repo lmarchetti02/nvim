@@ -67,3 +67,19 @@ vim.opt.linebreak = true
 -- Moves by visual lines (wrapped lines) unless a count is provided
 vim.keymap.set({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
 vim.keymap.set({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
+
+-- Automatically format multiple empty lines in LaTeX on save
+vim.api.nvim_create_autocmd("BufWritePre", {
+	pattern = "*.tex",
+	callback = function()
+		-- Save the current cursor position so it doesn't jump around
+		local save_cursor = vim.fn.getpos(".")
+
+		-- Silently search and replace 3 or more newlines with exactly 2
+		-- The 'e' flag prevents error messages if no extra lines are found
+		vim.cmd([[%s/\n\{3,}/\r\r/ge]])
+
+		-- Restore cursor position
+		vim.fn.setpos(".", save_cursor)
+	end,
+})
