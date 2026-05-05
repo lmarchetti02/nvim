@@ -52,11 +52,6 @@ return {
 					outputPath = "$root/$dir/$name",
 				},
 			},
-			ltex = {
-				settings = {
-					ltex = { language = "en-US" },
-				},
-			},
 			lua_ls = {},
 			cmake = {},
 			marksman = {},

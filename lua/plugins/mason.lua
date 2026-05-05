@@ -29,7 +29,6 @@ return {
 				"bashls", -- bash, zsh
 				"vimls", -- vimscript
 				"dotls", -- dot
-				"ltex", -- language tool
 			},
 
 			automatic_installation = true,
