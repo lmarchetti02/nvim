@@ -20,6 +20,7 @@ return {
 				"typst",
 				"toml",
 				"dot",
+				"sql",
 			},
 			highlight = { enable = true, disable = { "latex" } },
 			indent = { enable = true },

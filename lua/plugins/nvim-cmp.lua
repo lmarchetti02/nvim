@@ -88,5 +88,13 @@ return {
 			}),
 			matching = { disallow_symbol_nonprefix_matching = false },
 		})
+
+		-- Dadbod auto-completion specifically for SQL files
+		cmp.setup.filetype({ "sql" }, {
+			sources = {
+				{ name = "vim-dadbod-completion" },
+				{ name = "buffer" },
+			},
+		})
 	end,
 }
