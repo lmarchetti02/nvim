@@ -3,6 +3,7 @@ local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
 local fmt = require("luasnip.extras.fmt").fmt
+local rep = require("luasnip.extras").rep
 
 -- Helper for simple commands without arguments (e.g., \ds -> \ds)
 local function simple(trig)
@@ -15,12 +16,9 @@ return {
 	-- 1. TITLE PAGE
 	-- --------------------------------------
 	simple("maketitlepage"),
-	s("makeabstract", fmt("\\makeabstract{{{}}}{{{}}}", { i(1, "title"), i(2, "text") })),
+	simple("emptypage"),
+	s("makeabstract", fmt("\\makeabstract{{{}}}", { i(2, "text") })),
 	s("setsubtitle", fmt("\\setsubtitle{{{}}}", { i(1, "name") })),
-	s("setaccyear", fmt("\\setaccyear{{{}}}", { i(1, "year") })),
-	s("setdep", fmt("\\setdep{{{}}}", { i(1, "name") })),
-	s("setuni", fmt("\\setuni{{{}}}", { i(1, "name") })),
-	s("setlogo", fmt("\\setlogo{{{}}}", { i(1, "path") })),
 
 	-- --------------------------------------
 	-- 2. MATH COMMANDS (No Arguments)
@@ -151,4 +149,31 @@ return {
 	),
 	s("me", fmt("\\me{{{}}}", { i(1, "operator") })),
 	s("su", fmt("\\su{{{}}}", { i(1, "text") })),
+	s("SI", fmt("\\SI{{{}}}{{{}}}", { i(1, "num"), i(2, "unit") })),
+
+	-- --------------------------------------
+	-- 3. Figures
+	-- --------------------------------------
+	s(
+		"figh",
+		fmt(
+			[[
+				\begin{{figure}}[H]
+						\begin{{center}}
+								{}
+						\end{{center}}
+						\caption[{}]{{% 
+								\textbf{{{}.}}
+						}}
+						\label{{fig:{}}}
+				\end{{figure}}
+			]],
+			{
+				i(1, "content"),
+				i(2, "caption text"),
+				rep(2), -- Automatically mirrors the text typed in node 2
+				i(3, "label"),
+			}
+		)
+	),
 }

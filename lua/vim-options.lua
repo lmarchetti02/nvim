@@ -83,3 +83,14 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 		vim.fn.setpos(".", save_cursor)
 	end,
 })
+
+-- LaTeX shortcuts
+vim.keymap.set("n", "<leader>dl", "<leader>wj:q<CR>", { remap = true, desc = "Close LaTeX compilation error" })
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "tex",
+	callback = function()
+		-- <M-M> represents Alt/Option + Shift + M
+		-- It inserts $ $, then moves the cursor left one space to put you inside
+		vim.keymap.set("i", "<M-M>", "$  $<Left><Left>", { buffer = true, desc = "Insert inline math" })
+	end,
+})
