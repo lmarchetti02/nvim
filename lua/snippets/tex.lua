@@ -160,7 +160,7 @@ return {
 			[[
 				\begin{{figure}}[H]
 						\begin{{center}}
-								{}
+								\includegraphics[width=\linewidth]{{{}}}
 						\end{{center}}
 						\caption[{}]{{% 
 								\textbf{{{}.}}
