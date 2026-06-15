@@ -9,6 +9,11 @@ return {
 		-- Define server configurations
 		local servers = {
 			clangd = {
+				cmd = {
+					"clangd",
+					"--background-index",
+					"--query-driver=/usr/bin/g++*,/usr/bin/gcc*,/usr/bin/c++*",
+				},
 				cmd_env = {
 					compilationDatabasePath = "./build",
 				},
