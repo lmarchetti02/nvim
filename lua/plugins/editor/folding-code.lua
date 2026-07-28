@@ -53,6 +53,11 @@ return {
 		ufo.setup({
 			fold_virt_text_handler = handler,
 			provider_selector = function(bufnr, filetype, buftype)
+				local buftype_exclude = { nofile = true, terminal = true, prompt = true }
+				local filetype_exclude = { ["neo-tree"] = true }
+				if buftype_exclude[buftype] or filetype_exclude[filetype] then
+					return ""
+				end
 				return { "treesitter", "indent" }
 			end,
 		})
