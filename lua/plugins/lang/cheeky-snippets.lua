@@ -1,3 +1,5 @@
+-- NOTE: this plugin's own built-in snippets, unrelated to the hand-written
+-- LuaSnip snippets in lua/snippets/
 return {
 	"madskjeldgaard/cheeky-snippets.nvim",
 	event = "InsertEnter",
