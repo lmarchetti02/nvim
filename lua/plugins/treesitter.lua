@@ -47,8 +47,8 @@ return {
 			pattern = filetypes_to_highlight,
 			callback = function()
 				vim.treesitter.start()
-				vim.wo[0][0].foldmethod = "expr"
-				vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+				-- Folding is owned by nvim-ufo (see folding-code.lua); don't set
+				-- foldmethod/foldexpr here too, or the two plugins fight over it.
 				-- NOTE: treesitter indent is documented as experimental on nvim-treesitter's
 				-- main branch; drop this line and rely on filetype indent if it misbehaves.
 				vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"

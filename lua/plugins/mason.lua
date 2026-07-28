@@ -19,7 +19,6 @@ return {
 				"lua_ls", -- Lua
 				"clangd", -- C, C++
 				"cmake", -- CMake
-				"julials", -- Julia
 				"marksman", -- Markdown
 				"pyright", -- Python
 				"jsonls", -- Json
@@ -45,7 +44,6 @@ return {
 				"ruff", -- python formatter
 				"pylint", -- python linter
 				"typstyle", --typst formatter
-				"debugpy",
 				"flake8",
 				"mypy",
 				"clang-format", -- c++ formatter

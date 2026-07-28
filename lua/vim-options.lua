@@ -15,12 +15,10 @@ vim.opt.relativenumber = true
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>", { desc = "Delete Search" })
 vim.keymap.set("n", "<leader>in", "gg=G", { desc = "Indent All" })
 vim.keymap.set("n", "<leader>sa", "ggVG", { desc = "Select All" })
-vim.keymap.set("i", "kj", "<Esc>") -- exit normal mode
+vim.keymap.set("i", "kj", "<Esc>", { desc = "Exit insert mode" })
 
 -- remove some mappings
-vim.keymap.set("n", "<leader>i", "")
-vim.keymap.set("n", "<leader>a", "")
-vim.keymap.set("n", "<leader>u", "")
+vim.keymap.set("n", "<leader>a", "", { desc = "(unbound)" })
 
 -- spelling
 vim.opt.spelllang = { "en_us", "it" }
@@ -34,7 +32,7 @@ vim.keymap.set({ "n", "v" }, "<leader>y", '"*y', { desc = "Copy selection to cli
 vim.keymap.set({ "n", "v" }, "<leader>P", '"*p', { desc = "Paste from system clipboard" })
 
 -- non-destructive paste with "p" and
-vim.keymap.set("x", "p", [["_dP]])
+vim.keymap.set("x", "p", [["_dP]], { desc = "Paste without overwriting register" })
 
 -- toggle linting errors
 local virtual_text_enabled = true -- Track the state of virtual text

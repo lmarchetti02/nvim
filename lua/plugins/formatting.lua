@@ -11,7 +11,7 @@ return {
 				cpp = { "clang_format" },
 				markdown = { "prettier" },
 				json = { "prettier" },
-				latex = { "latexindent" },
+				tex = { "latexindent" },
 				bash = { "beautysh" },
 				zsh = { "beautysh" },
 				typst = { "typstyle" },

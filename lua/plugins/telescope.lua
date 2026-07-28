@@ -13,7 +13,7 @@ return {
 			vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Active Buffers" })
 			vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Help" })
 			vim.keymap.set("n", "<leader>gs", builtin.git_status, { desc = "Git Status" })
-			vim.keymap.set("n", '"', builtin.registers, {})
+			vim.keymap.set("n", "<leader>fr", builtin.registers, { desc = "Find Registers" })
 		end,
 	},
 	{

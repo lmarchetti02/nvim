@@ -1,4 +1,4 @@
-vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
+vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>", { desc = "Exit terminal mode" })
 
 local state = {
 	floating = {
@@ -49,5 +49,5 @@ local toggle_terminal = function()
 	end
 end
 
-vim.api.nvim_create_user_command("Floaterminal", toggle_terminal, {})
-vim.keymap.set({ "n", "t" }, "<leader>tt", toggle_terminal)
+vim.api.nvim_create_user_command("Floaterminal", toggle_terminal, { desc = "Toggle floating terminal" })
+vim.keymap.set({ "n", "t" }, "<leader>tt", toggle_terminal, { desc = "Toggle Floating Terminal" })

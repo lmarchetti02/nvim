@@ -7,10 +7,10 @@ return {
 	init = function()
 		vim.g.barbar_auto_setup = false
 
-		vim.keymap.set("n", "<Tab>", "<Cmd>BufferNext<CR>", {})
-		vim.keymap.set("n", "<S-Tab>", "<Cmd>BufferPrevious<CR>", {})
-		vim.keymap.set("n", "<leader>x", "<Cmd>BufferClose<CR>", {})
-		vim.keymap.set("n", "<leader>p", "<Cmd>BufferPin<CR>", {})
+		vim.keymap.set("n", "<Tab>", "<Cmd>BufferNext<CR>", { desc = "Next Buffer" })
+		vim.keymap.set("n", "<S-Tab>", "<Cmd>BufferPrevious<CR>", { desc = "Previous Buffer" })
+		vim.keymap.set("n", "<leader>x", "<Cmd>BufferClose<CR>", { desc = "Close Buffer" })
+		vim.keymap.set("n", "<leader>p", "<Cmd>BufferPin<CR>", { desc = "Pin Buffer" })
 	end,
 	opts = {
 		animation = true,

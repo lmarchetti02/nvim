@@ -64,6 +64,7 @@ return {
 			texlab = {},
 			taplo = {},
 			dotls = {},
+			jsonls = {},
 			sourcekit = {
 				-- ships with the Xcode/Swift toolchain, not managed by Mason
 				filetypes = { "swift" },

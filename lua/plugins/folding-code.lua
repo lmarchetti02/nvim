@@ -10,17 +10,16 @@ return {
 		vim.o.foldlevelstart = 99
 		vim.o.foldenable = true
 
-		vim.keymap.set("n", "+", "zo")
-		vim.keymap.set("n", "-", "zc")
-		vim.keymap.set("n", "<leader>ua", ufo.openAllFolds)
-		vim.keymap.set("n", "<leader>fa", ufo.closeAllFolds)
+		vim.keymap.set("n", "+", "zo", { desc = "Open fold under cursor" })
+		vim.keymap.set("n", "-", "zc", { desc = "Close fold under cursor" })
+		vim.keymap.set("n", "<leader>ua", ufo.openAllFolds, { desc = "Open All Folds" })
+		vim.keymap.set("n", "<leader>fa", ufo.closeAllFolds, { desc = "Close All Folds" })
 		vim.keymap.set("n", "zk", function()
 			local winid = ufo.peekFoldedLinesUnderCursor()
 			if not winid then
-				vim.fn.CocActionAsync("definitionHover") -- coc.nvim
 				vim.lsp.buf.hover()
 			end
-		end)
+		end, { desc = "Peek Fold / LSP Hover" })
 
 		-- The visual handler (keeps your cool fold text)
 		local handler = function(virtText, lnum, endLnum, width, truncate)
