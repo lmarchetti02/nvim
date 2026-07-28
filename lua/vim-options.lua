@@ -65,3 +65,16 @@ vim.opt.linebreak = true
 -- Moves by visual lines (wrapped lines) unless a count is provided
 vim.keymap.set({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
 vim.keymap.set({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
+
+-- Prevent terminal buffers (e.g. the floating terminal, Claude Code) with a still-running
+-- job from blocking :wqa/:xa with "E948: Job still running"
+vim.api.nvim_create_autocmd("QuitPre", {
+	desc = "Force-close terminal buffers so they don't block :wqa/:xa",
+	callback = function()
+		for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+			if vim.bo[buf].buftype == "terminal" then
+				pcall(vim.api.nvim_buf_delete, buf, { force = true })
+			end
+		end
+	end,
+})
