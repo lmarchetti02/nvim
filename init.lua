@@ -15,5 +15,19 @@ vim.opt.rtp:prepend(lazypath)
 vim.opt.showmode = false
 
 require("vim-options") -- import vim options
-require("lazy").setup("plugins") -- import plugins
+
+-- import plugins: lazy.nvim only auto-discovers files directly under lua/plugins/,
+-- not nested subdirectories, so each subfolder needs its own explicit import
+require("lazy").setup({
+	spec = {
+		{ import = "plugins.git" },
+		{ import = "plugins.lsp" },
+		{ import = "plugins.editor" },
+		{ import = "plugins.ui" },
+		{ import = "plugins.nav" },
+		{ import = "plugins.lang" },
+		{ import = "plugins.data" },
+	},
+})
+
 require("config.floating-terminal") -- import terminal
