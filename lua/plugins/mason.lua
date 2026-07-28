@@ -42,15 +42,13 @@ return {
 				"stylua", -- lua formatter
 				"isort", -- python formatter
 				"ruff", -- python formatter
-				"pylint", -- python linter
 				"typstyle", --typst formatter
-				"flake8",
-				"mypy",
 				"clang-format", -- c++ formatter
 				"beautysh", -- bash/zsh formatter
 				"taplo", --TOML formatter
 				"swiftformat", -- swift formatter
 				"swiftlint", -- swift linter
+				"vale", -- tex linter
 			},
 		})
 	end,

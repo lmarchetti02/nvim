@@ -8,11 +8,12 @@ return {
 		"nvim-tree/nvim-web-devicons",
 		"MunifTanjim/nui.nvim",
 	},
+	keys = {
+		{ "<leader>fs", ":Neotree reveal filesystem left<CR>", desc = "Reveal Filesystem (Neo-tree)" },
+		{ "<leader>cfs", ":Neotree close<CR>", desc = "Close Neo-tree" },
+		{ "<leader>t", ":Neotree focus<CR>", desc = "Focus Neo-tree" },
+	},
 	config = function()
-		vim.keymap.set("n", "<leader>fs", ":Neotree reveal filesystem left<CR>", { desc = "Reveal Filesystem (Neo-tree)" })
-		vim.keymap.set("n", "<leader>cfs", ":Neotree close<CR>", { desc = "Close Neo-tree" })
-		vim.keymap.set("n", "<leader>t", ":Neotree focus<CR>", { desc = "Focus Neo-tree" })
-
 		require("neo-tree").setup({
 			filesystem = {
 				filtered_items = {

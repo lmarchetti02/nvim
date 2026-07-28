@@ -1,5 +1,6 @@
 return {
 	"lewis6991/gitsigns.nvim",
+	event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		require("gitsigns").setup({
 			signs = {
@@ -40,9 +41,6 @@ return {
 				row = 0,
 				col = 1,
 			},
-			-- yadm = {
-			-- 	enable = false,
-			-- },
 		})
 
 		vim.keymap.set("n", "gk", ":Gitsigns prev_hunk<CR>", { desc = "Previous Hunk" })

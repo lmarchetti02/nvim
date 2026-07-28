@@ -4,6 +4,8 @@ return {
 	config = function()
 		local lint = require("lint")
 
+		-- clangtidy has no Mason package (only clang-format/clangd do); it resolves
+		-- from the Homebrew LLVM install already on PATH instead.
 		lint.linters_by_ft = {
 			python = { "ruff" },
 			cpp = { "clangtidy" },

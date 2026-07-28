@@ -1,7 +1,11 @@
 return {
 	"romgrk/barbar.nvim",
+	lazy = false,
 	dependencies = {
-		"lewis6991/gitsigns.nvim", -- OPTIONAL: for git status
+		-- gitsigns.nvim is an OPTIONAL integration (git status in buffer tabs), and is
+		-- intentionally not listed here: it's already installed via git.lua, and lazy.nvim
+		-- force-loads a `lazy=false` plugin's `dependencies` eagerly regardless of their
+		-- own lazy triggers, which would defeat gitsigns' own BufReadPre/BufNewFile gate.
 		"nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
 	},
 	init = function()

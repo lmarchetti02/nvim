@@ -1,6 +1,7 @@
 return {
 	"vidocqh/data-viewer.nvim",
 	opts = {},
+	cmd = { "DataViewer", "DataViewerNextTable", "DataViewerPrevTable", "DataViewerClose" },
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"kkharji/sqlite.lua", -- Optional, sqlite support

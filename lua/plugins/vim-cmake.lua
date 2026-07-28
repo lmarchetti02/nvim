@@ -1,5 +1,6 @@
 return {
 	"cdelledonne/vim-cmake",
+	ft = "cmake",
 	config = function()
 		vim.keymap.set("n", "mg", ":CMakeGenerate<CR>", { desc = "CMake Generate" })
 		vim.keymap.set("n", "mb", ":CMakeBuild<CR>", { desc = "CMake Build" })
