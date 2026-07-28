@@ -20,6 +20,7 @@ require("vim-options") -- import vim options
 -- not nested subdirectories, so each subfolder needs its own explicit import
 require("lazy").setup({
 	spec = {
+		{ import = "plugins.ai" },
 		{ import = "plugins.git" },
 		{ import = "plugins.lsp" },
 		{ import = "plugins.editor" },
