@@ -8,6 +8,7 @@ return {
 			python = { "ruff" },
 			cpp = { "clangtidy" },
 			tex = { "vale" },
+			swift = { "swiftlint" },
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })

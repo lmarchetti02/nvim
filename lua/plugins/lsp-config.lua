@@ -64,6 +64,10 @@ return {
 			texlab = {},
 			taplo = {},
 			dotls = {},
+			sourcekit = {
+				-- ships with the Xcode/Swift toolchain, not managed by Mason
+				filetypes = { "swift" },
+			},
 		}
 
 		-- Configure and enable each server

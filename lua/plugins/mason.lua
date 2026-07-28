@@ -29,6 +29,9 @@ return {
 				"bashls", -- bash, zsh
 				"vimls", -- vimscript
 				"dotls", -- dot
+				-- sourcekit-lsp (Swift) is not installed via Mason: it ships with the
+				-- Xcode/Swift toolchain and is already on PATH, configured directly in
+				-- lsp-config.lua
 			},
 
 			automatic_installation = true,
@@ -48,6 +51,8 @@ return {
 				"clang-format", -- c++ formatter
 				"beautysh", -- bash/zsh formatter
 				"taplo", --TOML formatter
+				"swiftformat", -- swift formatter
+				"swiftlint", -- swift linter
 			},
 		})
 	end,
