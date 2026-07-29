@@ -2,7 +2,7 @@
 
 return {
 	"nvim-telescope/telescope.nvim",
-	tag = "0.1.5",
+	tag = "v0.2.2",
 	dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-ui-select.nvim" },
 	keys = {
 		{ "<leader>ff", function() require("telescope.builtin").find_files() end, desc = "Find Files" },
