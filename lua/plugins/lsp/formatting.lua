@@ -18,6 +18,12 @@ return {
 				toml = { "taplo" },
 				swift = { "swiftformat" },
 			},
+			formatters = {
+				latexindent = {
+					-- keep indent.log (and any backups) out of every LaTeX project dir
+					prepend_args = { "--cruft=" .. vim.fn.stdpath("cache") .. "/latexindent" },
+				},
+			},
 			format_on_save = {
 				lsp_fallback = true,
 				async = false,
