@@ -9,6 +9,7 @@ return {
 		lint.linters_by_ft = {
 			python = { "ruff" },
 			cpp = { "clangtidy" },
+			cuda = { "clangtidy" },
 			tex = { "vale" },
 			swift = { "swiftlint" },
 		}
@@ -18,7 +19,7 @@ return {
 		-- clang-tidy (unlike clangd) can't infer compile flags for a header from whichever
 		-- .cpp includes it, so it fails on standalone headers even when clangd handles them
 		-- fine; skip linting on headers and leave those diagnostics to clangd.
-		local header_extensions = { h = true, hh = true, hpp = true, hxx = true }
+		local header_extensions = { h = true, hh = true, hpp = true, hxx = true, cuh = true }
 
 		vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
 			group = lint_augroup,

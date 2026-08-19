@@ -9,6 +9,7 @@ return {
 				python = { "ruff_format", "isort" },
 				lua = { "stylua" },
 				cpp = { "clang_format" },
+				cuda = { "clang_format" },
 				markdown = { "prettier" },
 				json = { "prettier" },
 				tex = { "latexindent" },

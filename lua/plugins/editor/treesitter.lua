@@ -3,6 +3,7 @@
 local parsers_to_install = {
 	"c",
 	"cpp",
+	"cuda",
 	"lua",
 	"cmake",
 	"python",
@@ -23,6 +24,7 @@ local parsers_to_install = {
 local filetypes_to_highlight = {
 	"c",
 	"cpp",
+	"cuda",
 	"lua",
 	"cmake",
 	"python",

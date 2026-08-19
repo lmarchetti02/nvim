@@ -17,7 +17,7 @@ return {
 		mason_lspconfig.setup({
 			ensure_installed = {
 				"lua_ls", -- Lua
-				"clangd", -- C, C++
+				"clangd", -- C, C++, CUDA
 				"cmake", -- CMake
 				"marksman", -- Markdown
 				"pyright", -- Python
@@ -43,7 +43,7 @@ return {
 				"isort", -- python formatter
 				"ruff", -- python formatter
 				"typstyle", --typst formatter
-				"clang-format", -- c++ formatter
+				"clang-format", -- c++/cuda formatter
 				"beautysh", -- bash/zsh formatter
 				"taplo", --TOML formatter
 				"swiftformat", -- swift formatter
