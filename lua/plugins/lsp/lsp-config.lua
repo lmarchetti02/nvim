@@ -1,3 +1,6 @@
+-- nvim-lspconfig: per-server settings via the native vim.lsp.config/enable API,
+-- plus the LspAttach autocmd that sets buffer-local LSP keymaps.
+
 return {
 	"neovim/nvim-lspconfig",
 	dependencies = {

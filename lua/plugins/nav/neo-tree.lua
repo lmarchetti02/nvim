@@ -1,4 +1,4 @@
--- NEO-TREE
+-- neo-tree.nvim: filesystem sidebar/file explorer.
 
 return {
 	"nvim-neo-tree/neo-tree.nvim",

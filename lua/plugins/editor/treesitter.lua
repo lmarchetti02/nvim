@@ -1,4 +1,5 @@
--- TREESITTER
+-- nvim-treesitter: installs parsers and enables highlighting/indent for the
+-- configured filetypes (folding is owned separately by nvim-ufo).
 
 local parsers_to_install = {
 	"c",

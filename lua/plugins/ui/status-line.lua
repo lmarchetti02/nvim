@@ -1,4 +1,5 @@
--- LUALINE
+-- lualine.nvim: statusline, showing the noice mode indicator plus
+-- encoding/fileformat/filetype.
 
 return {
 	"nvim-lualine/lualine.nvim",

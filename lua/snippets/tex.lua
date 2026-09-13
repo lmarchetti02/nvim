@@ -1,3 +1,5 @@
+-- LuaSnip snippets for LaTeX: personal math/physics macros and a figure template.
+
 local ls = require("luasnip")
 local s = ls.snippet
 local t = ls.text_node

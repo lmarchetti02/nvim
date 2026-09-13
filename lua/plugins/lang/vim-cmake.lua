@@ -1,3 +1,5 @@
+-- vim-cmake: CMake generate/build/run commands and keymaps for CMake projects.
+
 return {
 	"cdelledonne/vim-cmake",
 	ft = "cmake",

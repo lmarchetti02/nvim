@@ -1,3 +1,6 @@
+-- nvim-lint: per-filetype linters, run on BufEnter/BufWritePost/InsertLeave
+-- (standalone headers are skipped for clangtidy; see comment below).
+
 return {
 	"mfussenegger/nvim-lint",
 	event = { "BufReadPre", "BufNewFile" },

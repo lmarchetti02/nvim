@@ -1,3 +1,5 @@
+-- typst-preview.nvim: live-updating preview pane for Typst documents.
+
 return {
 	"chomosuke/typst-preview.nvim",
 	ft = "typst", -- Only load for typst files

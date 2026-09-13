@@ -1,3 +1,5 @@
+-- barbar.nvim: buffer/tab bar, with next/prev/close/pin keymaps.
+
 return {
 	"romgrk/barbar.nvim",
 	lazy = false,

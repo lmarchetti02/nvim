@@ -1,3 +1,4 @@
+-- cheeky-snippets.nvim: built-in per-language snippet pack.
 -- NOTE: this plugin's own built-in snippets, unrelated to the hand-written
 -- LuaSnip snippets in lua/snippets/
 return {

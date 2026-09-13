@@ -1,3 +1,6 @@
+-- claudecode.nvim: Claude Code terminal integration, with keymaps to toggle/focus
+-- the session, send buffers/selections to it, and accept or deny its diffs.
+
 return {
 	"coder/claudecode.nvim",
 	dependencies = { "folke/snacks.nvim" },

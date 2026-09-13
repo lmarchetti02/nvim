@@ -1,3 +1,5 @@
+-- vim-tmux-navigator: seamless pane navigation across Neovim splits and tmux panes.
+
 return {
 	"christoomey/vim-tmux-navigator",
 	cmd = {

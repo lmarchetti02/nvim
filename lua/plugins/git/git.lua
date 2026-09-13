@@ -1,3 +1,6 @@
+-- gitsigns.nvim: gutter signs for git changes, hunk navigation/stage/reset/diff,
+-- and line blame.
+
 return {
 	"lewis6991/gitsigns.nvim",
 	event = { "BufReadPre", "BufNewFile" },

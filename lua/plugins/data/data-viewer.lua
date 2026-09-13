@@ -1,3 +1,5 @@
+-- data-viewer.nvim: floating tabular viewer for CSV/SQLite/etc. data files.
+
 return {
 	"vidocqh/data-viewer.nvim",
 	cmd = { "DataViewer", "DataViewerNextTable", "DataViewerPrevTable", "DataViewerClose" },

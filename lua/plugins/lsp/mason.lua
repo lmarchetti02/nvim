@@ -1,4 +1,4 @@
--- LSP
+-- mason.nvim: declares which LSP servers and which CLI formatters/linters get installed.
 
 return {
 	"williamboman/mason.nvim",

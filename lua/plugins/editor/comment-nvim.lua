@@ -1,3 +1,5 @@
+-- Comment.nvim: line/block comment toggling (gcc, gbc, gc{motion}, gb{motion}, gcO/gco/gcA).
+
 return {
 	"numToStr/Comment.nvim",
 	lazy = false,

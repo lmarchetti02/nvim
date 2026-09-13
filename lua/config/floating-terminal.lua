@@ -1,3 +1,5 @@
+-- Toggleable floating terminal window, exposed as :Floaterminal and <leader>tt.
+
 vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>", { desc = "Exit terminal mode" })
 
 local state = {

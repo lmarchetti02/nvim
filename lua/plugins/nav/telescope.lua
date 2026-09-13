@@ -1,4 +1,5 @@
--- TELESCOPE
+-- telescope.nvim: fuzzy finder for files, live grep, buffers, help tags,
+-- git status, and registers.
 
 return {
 	"nvim-telescope/telescope.nvim",

@@ -1,3 +1,5 @@
+-- nvim-cmp: autocompletion engine — sources, snippet expansion, and cmdline completion.
+
 return {
 	"hrsh7th/nvim-cmp",
 	event = { "InsertEnter", "CmdlineEnter" },

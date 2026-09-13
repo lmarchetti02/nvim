@@ -1,3 +1,6 @@
+-- Aggregates and registers all per-filetype LuaSnip snippet tables; required
+-- from nvim-cmp's config function (after LuaSnip/cmp are set up).
+
 local ls = require("luasnip")
 
 -- Load Python snippets

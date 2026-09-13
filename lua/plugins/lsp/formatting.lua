@@ -1,3 +1,5 @@
+-- conform.nvim: per-filetype formatters, run on save (with LSP formatting as fallback).
+
 return {
 	"stevearc/conform.nvim",
 	event = { "BufReadPre", "BufNewFile" },

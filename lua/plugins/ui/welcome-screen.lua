@@ -1,5 +1,4 @@
--- ALPHA-NVIM
---
+-- alpha-nvim: startup dashboard shown when opening Neovim with no file.
 
 return {
 	"goolord/alpha-nvim",

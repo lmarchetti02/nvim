@@ -1,4 +1,5 @@
--- LAZY.NVIM PACKAGE MANAGER
+-- Entry point: bootstraps lazy.nvim, loads global vim-options, imports each
+-- plugins/<subfolder> spec, then loads the standalone floating-terminal feature.
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then

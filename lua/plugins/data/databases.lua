@@ -1,3 +1,5 @@
+-- vim-dadbod(-ui): connects to and browses/queries SQL databases from within Neovim.
+
 return {
 	"tpope/vim-dadbod",
 	dependencies = {

@@ -1,3 +1,5 @@
+-- which-key.nvim: popup showing available keymaps as you type a prefix.
+
 return {
 	"folke/which-key.nvim",
 	event = "VeryLazy",

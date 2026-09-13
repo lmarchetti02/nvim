@@ -1,3 +1,5 @@
+-- LuaSnip snippets for C: main functions, include guards, switch statement.
+
 local ls = require("luasnip")
 local s = ls.snippet
 local t = ls.text_node

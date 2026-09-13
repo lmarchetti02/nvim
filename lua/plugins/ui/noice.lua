@@ -1,4 +1,5 @@
--- NOICE
+-- noice.nvim: replaces the cmdline, messages, and popupmenu UI with a nicer
+-- floating/treesitter-rendered UI.
 
 return {
 	"folke/noice.nvim",

@@ -1,4 +1,5 @@
--- VIM OPTIONS
+-- Global, filetype-agnostic options and keymaps: leader key, indentation,
+-- spelling, clipboard, window navigation, and misc quality-of-life tweaks.
 
 -- basic configurations
 vim.g.mapleader = " "

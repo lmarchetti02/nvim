@@ -1,3 +1,6 @@
+-- vimtex: LaTeX compilation/viewing, plus blank-line collapsing on save and
+-- an inline-math insert keymap.
+
 return {
 	"lervag/vimtex",
 	lazy = false,

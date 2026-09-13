@@ -1,3 +1,6 @@
+-- nvim-autopairs: auto-closes brackets/quotes, treesitter-aware, with a
+-- dedicated rule for Python triple-quoted strings.
+
 return {
 	"windwp/nvim-autopairs",
 	event = "InsertEnter",

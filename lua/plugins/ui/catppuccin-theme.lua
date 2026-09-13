@@ -1,4 +1,4 @@
--- COLORSCHEME
+-- catppuccin: colorscheme, set to the mocha flavor.
 
 return {
 	"catppuccin/nvim",

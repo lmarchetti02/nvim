@@ -1,3 +1,6 @@
+-- render-markdown.nvim: in-buffer rendering (headings, lists, code blocks, etc.)
+-- for markdown files.
+
 return {
 	"MeanderingProgrammer/render-markdown.nvim",
 	dependencies = {
