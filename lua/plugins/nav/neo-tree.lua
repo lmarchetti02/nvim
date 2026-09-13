@@ -25,6 +25,8 @@ return {
 			},
 			window = {
 				mappings = {
+					["<Tab>"] = "none", -- free up <Tab> for barbar's BufferNext (plugins/ui/buffers.lua)
+					["<C-t>"] = "select",
 					["<leader><cr>"] = function(state)
 						local node = state.tree:get_node()
 						if node.type == "directory" then
