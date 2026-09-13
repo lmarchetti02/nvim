@@ -49,6 +49,7 @@ return {
 				"swiftformat", -- swift formatter
 				"swiftlint", -- swift linter
 				"vale", -- tex linter
+				"jupytext", -- ipynb <-> py conversion, used by jupytext.nvim
 			},
 		})
 	end,
