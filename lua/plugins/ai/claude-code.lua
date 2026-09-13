@@ -8,6 +8,21 @@ return {
 				width = 0.9,
 				height = 0.9,
 				border = "rounded",
+				keys = {
+					-- <Esc> is sent straight to the Claude process and interrupts whatever
+					-- it's running, so it can't double as "hide this window". <C-x> is
+					-- intercepted by Neovim before it reaches the terminal, so it hides
+					-- the window (Claude keeps running in the background) without ever
+					-- touching Claude's input.
+					hide_claude = {
+						"<C-x>",
+						function()
+							vim.cmd("ClaudeCode")
+						end,
+						mode = "t",
+						desc = "Hide Claude Code window (keeps running)",
+					},
+				},
 			},
 		},
 	},
